@@ -1,38 +1,427 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>RH-CONNEXION.NET - En construction</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin"/>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&amp;display=swap"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&amp;display=swap" media="print" onload="this.media='all'"/>
-    <noscript>
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&amp;display=swap"/>
-    </noscript>
-    <link href="css/bootstrap.min.css?ver=1.2.0" rel="stylesheet">
-    <link href="css/font-awesome/css/all.min.css?ver=1.2.0" rel="stylesheet">
-    <link href="css/main.css?ver=1.2.0" rel="stylesheet">
-  </head>
-  <body id="top"><div class="site-wrapper">
-  <div class="site-wrapper-inner">
-    <div class="cover-container">
-      <div class="masthead clearfix">
-        <div class="inner">
-          <h3 class="masthead-brand">Site en construction</h3>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>RH-CONNEXION</title>
+	<!-- core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <link href="css/owl.transitions.css" rel="stylesheet">
+    <link href="css/prettyPhoto.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->       
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <!-- Envio de emails -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+    (function() {
+        emailjs.init("user_2nAVAR29mbluRhiI5CIZs");
+    })();
+    </script>
+</head><!--/head-->
+
+<body id="home" class="homepage">
+    <header id="top-header" class="navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- responsive nav button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- /responsive nav button -->
+                    
+                    <!-- logo -->
+                    <div class="navbar-brand">
+                        <a class="smooth-scroll" data-section="#home" href="#home" >
+                            <img src="images/logo.png" alt="">
+                        </a>
+                    </div>
+                    <!-- /logo -->
+                </div>
+
+                <!-- main nav -->
+                <nav class="collapse navbar-collapse navbar-right" role="navigation">
+                    <div class="main-menu">
+                        <ul id="nav" class="nav navbar-nav">
+                            <li class="scroll"><a href="#home" data-section="#home">Accueil</a></li>
+                            <li class="scroll"><a href="#about" data-section="#about">À propos</a></li>
+                            <li class="scroll"><a href="#features" data-section="#services">Processus</a></li>
+                            <li class="scroll"><a href="#services" data-section="#features">Services</a></li>
+                            <li class="scroll"><a href="#contact-area" data-section="#contact-area">Contact</a></li>  
+                            <a class="btn btn-primary btn-lg" href="perfiles.html" role="button">Nos perfiles</a>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- /main nav -->
+                
+            </div>
+        </header>
+
+    <section id="main-slider">
+        <div class="owl-carousel">
+            <div class="item" style="background-image: url(images/slider/slider.jpg);">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="carousel-content text-center">
+                                    <h2>La connexion entre la main-d’oeuvre et les entreprises.</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+            <div class="item" style="background-image: url(images/slider/slider4.jpg);">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="carousel-content text-center">
+                                    <h2>La compagnie de solutions en recrutement.</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+            <div class="item" style="background-image: url(images/slider/slider3.jpg);">
+                <div class="slider-inner">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="carousel-content text-center">
+                                    <h2>Une équipe dédiée au recrutement de personnel sur mesure.</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.item-->
+            
+        </div><!--/.owl-carousel-->
+    </section><!--/#main-slider-->
+
+    <section id="about">
+        <div class="container">
+
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown" style="color: #9B1F27;">R H - C O N N E X I O N . N E T. I N C</h2>
+                <h4 class="text-center wow fadeInDown">est née de l’expérience d’Hygienanet.inc dans le recrutement de personnel.</h4>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 wow fadeInRight">
+                    <h3 class="column-title" style="color: #9B1F27;">QUELQUES-UNS DE NOS CLIENTS</h3>
+                    <div class="row">
+                        <div class="col-sm-2 wow fadeInRight">
+                            <img class="img-responsive text-center" src="images/clients/client1.png" alt="">
+                        </div>
+                        <div class="col-sm-2 wow fadeInRight">
+                            <img class="img-responsive" src="images/clients/client2.png" alt="">
+                        </div>
+                        <div class="col-sm-2 wow fadeInRight">
+                            <img class="img-responsive" src="images/clients/client3.png" alt="">
+                        </div>
+                        <div class="col-sm-2 wow fadeInLeft">
+                            <img class="img-responsive" src="images/clients/client4.png" alt="">
+                        </div>
+                        <div class="col-sm-2 wow fadeInLeft">
+                            <img class="img-responsive" src="images/clients/client5.png" alt="">
+                        </div>
+                        <div class="col-sm-2 wow fadeInLeft">
+                            <img class="img-responsive" src="images/clients/client6.png" alt="">
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
         </div>
-      </div>      
-      <div class="inner cover">
-        <h1 class="cover-heading">RH-CONNEXION</h1>
-        <h5 class="cover-copy">La connexion entre la main-d’œuvre et les entrepris </h5>
-        <img src="img/logoRhConnexionTransp.png" width="150">
-        <p class="lead cover-copy">La compagnie de solutions en recrutement</p>
-      </div>
-  </div>
-</div>
-    <script src="scripts/jquery.slim.min.js?ver=1.2.0"></script>
-    <script src="scripts/bootstrap.bundle.min.js?ver=1.2.0"></script>
-    <script src="scripts/main.js?ver=1.2.0"></script>
-  </body>
+    </section><!--/#about-->
+
+    <section id="cta2">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">Votre candidat idéal, ici ou à l’étranger!</h2>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" >
+        <div class="container">
+
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown" style="color: #9B1F27;">COMMENT ÇA MARCHE ?</h2>
+            </div>
+
+            <div class="row">
+                <div class="features">
+                    <div class="col-sm-6 col-md-4 col-lg-4 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
+                        <div class="features-item">
+                            <div class="features-icon">
+                                <i class="fa fa-puzzle-piece"></i>
+                            </div>
+                            <h3 class="features-title font-alt">1. Définir les besoins du personnel et les critères de sélection</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-4 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
+                        <div class="features-item">
+                            <div class="features-icon">
+                                <i class="fa fa-search"></i>
+                            </div>
+                            <h3 class="features-title font-alt">2. Validation dans les bases de données, recherche active du profil</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-4 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
+                        <div class="features-item">
+                            <div class="features-icon">
+                                <i class="fa fa-check-circle-o"></i>
+                            </div>
+                            <h3 class="features-title font-alt">3. Le personnel recruté est validé par le client</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-4 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
+                        <div class="features-item">
+                            <div class="features-icon">
+                                <i class="fa  fa-users"></i>
+                            </div>
+                            <h3 class="features-title font-alt">4. Accompagnement à l’entrée en fonction</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-4 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">
+                        <div class="features-item">
+                            <div class="features-icon">
+                                <i class="fa fa-comments-o"></i>
+                            </div>
+                            <h3 class="features-title font-alt">5. Assurer la communication entre le personnel et le client</h3>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6 col-md-4 col-lg-4 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="500ms">
+                        <div class="features-item">
+                            <div class="features-icon">
+                                <i class="fa fa-eye"></i>
+                            </div>
+                            <h3 class="features-title font-alt">6. Suivre l’intégration du personnel</h3>
+                        </div>
+                    </div>
+                </div>
+            </div><!--/.row-->    
+        </div><!--/.container-->
+    </section><!--/#services-->
+
+    <section id="cta2">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">NOTRE VALEUR <span>AJOUTÉE</span></h2>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">Nous avons accès à un <strong>large réseau de personnel qualifié et diversifié</strong> dont une banque de CV importante que l’on peut vous présenter. Notre <strong>équipe multilingue</strong> nous permet d’atteindre un plus grand nombre de candidats potentiels, et de plus, nos <strong>services</strong> sont très <strong>abordables</strong>.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title text-center wow fadeInDown" style="color: #9B1F27;">R H - C O N N E X I O N . N E T. I N C</h2>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 wow fadeInLeft">
+                    <img class="img-responsive" src="images/RH.jpg" alt="">
+                </div>
+                <div class="col-sm-6">
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-search-plus"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">NOUS DÉNICHONS DES TALENTS</h4>
+                            <p>Le recrutement de personnel est une étape clé dans
+                                le développement de votre entreprise. Nous vous
+                                aidons à trouver le candidat idéal, <strong>ici ou à l’étranger.</strong> 
+                                Nous avons la possibilité de débloquer un grand
+                                nombre de candidats qui, pour des raisons linguistiques,
+                                ne peuvent accéder à ces opportunités.</p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-key"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">SERVICE AUX ENTREPRISES</h4>
+                            <p>D’après différentes études, on estime le coût du
+                                recrutement et de la phase d’intégration entre
+                                15 et 25 % du salaire brut annuel de la personne
+                                embauchée. (Source : Geresco)
+                                Avec notre aide, vou pouvez optimiser votre budget
+                                RH et maintenir votre croissance.</p>
+                        </div>
+                    </div>
+
+                    <div class="media service-box wow fadeInRight">
+                        <div class="pull-left">
+                            <i class="fa fa-users"></i>
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">PERSONNEL DIVERSIFIÉ</h4>
+                            <p>Vous avez besoin d’une main-d’oeuvre qualifiée de
+                                manière temporaire ou à long terme, pour un mandat
+                                spécifique ou pour un emploi permanent.
+                                Notre compagnie de recrutement possède une
+                                banque
+                                diversifiée de candidats ayant différentes
+                                compétences pour combler chacun de vos besoins.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta2">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">Faites-nous <span>confiance</span></h2>
+                <p class="wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">Nous croyons aux relations gagnant-gagnant.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-area">
+        <div class="container">
+            <div class="row">
+                <div class="section-header">
+                    <h2 class="section-title text-center wow fadeInDown animated" style="visibility: visible;">Formulaire de contact</h2>
+                    <p class="text-center wow fadeInDown animated" style="visibility: visible;">Nous joindre</p>
+                </div>
+                <form id="contact-form" name="contact-form" method="post" action="#" role="form" onsubmit="return enviarEmail();">
+                    <div class="col-lg-6 animated animate-from-left" style="opacity: 1; left: 0px;">
+
+                        <div class="form-group">
+                                <label for="name">Nom complet (Required)</label>
+                                <input id="name" type="text" name="name" class="form-control" placeholder="Nom complet">
+                                <span id="nameError" class="error-formulario"></span>
+                            </div>
+                        <div class="form-group">
+                                <label for="email">Courriel (Required)</label>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Courriel">
+                                <span id="emailError" class="error-formulario"></span>
+                            </div>
+                        <div class="form-group">
+                            <label for="subject">Sujet (Required)</label>
+                            <input type="text" id="subject" name="subject" class="form-control" placeholder="Sujet">
+                            <span id="subjectError" class="error-formulario"></span>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-6 animated animate-from-right" style="opacity: 1; right: 0px;">
+                        <div class="form-group">
+                            <label for="message">Votre message (Required)</label>
+                            <textarea name="message" id="message" class="form-control" rows="8" placeholder="Message"></textarea>
+                            <span id="messageError" class="error-formulario"></span>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="text-center">
+                          <button type="submit" id="contact-submit" class="btn btn-primary btn-lg btn-send-msg">Envoyer</button>
+                    </div>
+                    <div class="text-center">
+                        <span id="messageEnvio" class="error-formulario"></span>
+                  </div>
+                </form>
+                <script>
+                    function enviarEmail(){
+                        var name = document.getElementById('name').value;
+                        var email = document.getElementById('email').value;
+                        var subject = document.getElementById('subject').value;
+                        var message = document.getElementById('message').value;
+                        document.getElementById('nameError').innerHTML = '';
+                        document.getElementById('emailError').innerHTML = '';
+                        document.getElementById('subjectError').innerHTML = '';
+                        document.getElementById('messageError').innerHTML = '';
+                        if(name == '' || email == '' || subject == '' || message == ''){
+                            if(name == '')
+                                document.getElementById('nameError').innerHTML = 'Le nom est required';
+                            
+                            if(email == '')
+                                document.getElementById('emailError').innerHTML = 'Le courriel est required';
+                            
+                            if(subject == '')
+                                document.getElementById('subjectError').innerHTML = 'Le suject est required';
+                            
+                            if(message == '')
+                                document.getElementById('messageError').innerHTML = 'Le message est required';
+                            
+                            return false;
+                        }else{
+                            var template_params = {
+                            "from_name": name,
+                            "from_email": email,
+                            "message_tittle": 'es - '+subject,
+                            "message_html": message
+                            }
+                            var service_id = "gmail";
+                            var template_id = "template_zzxtt0j";
+                            emailjs.send(service_id,template_id,template_params);
+                            document.getElementById('messageEnvio').innerHTML = 'Merci de nous avoir écrit, nous répondrons à votre message dans les plus brefs délais!!!';
+                            return false;
+                        }
+                        
+                    }
+                </script>
+            </div>
+        </div>
+                
+    </section><!--/#bottom-->
+
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <p class="text-center">
+                        hector.connexion.net@gmail.com<br/>418 261-2391
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <p class="text-center">
+                        Tous droits réservés<br/> &copy; 2021 RH-CONNEXION
+                    </p>
+                </div>
+                <div class="col-sm-4">
+                    <p class="text-center">
+                        yolima.connexion.net@gmail.com<br/>581 922-1019
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer><!--/#footer-->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/mousescroll.js"></script>
+    <script src="js/jquery.prettyPhoto.js"></script>
+    <script src="js/jquery.isotope.min.js"></script>
+    <script src="js/jquery.inview.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>
