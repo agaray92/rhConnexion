@@ -372,16 +372,28 @@
                             
                             return false;
                         }else{
-                            var template_params = {
-                            "from_name": name,
-                            "from_email": email,
-                            "message_tittle": 'es - '+subject,
-                            "message_html": message
-                            }
-                            var service_id = "gmail";
-                            var template_id = "template_1troogr";
-                            emailjs.send(service_id,template_id,template_params);
-                            document.getElementById('messageEnvio').innerHTML = 'Merci de nous avoir écrit, nous répondrons à votre message dans les plus brefs délais!!!';
+                            
+                            var data = {
+                                service_id: 'service_6jrn7hi',
+                                template_id: 'template_1troogr',
+                                user_id: 'user_9YGxCX6gps8vEbWZgW8QX',
+                                template_params: {
+                                    "from_name": name,
+                                    "from_email": email,
+                                    "message_tittle": 'es - '+subject,
+                                    "message_html": message
+                                }
+                            };
+                            
+                            $.ajax('https://api.emailjs.com/api/v1.0/email/send', {
+                                type: 'POST',
+                                data: JSON.stringify(data),
+                                contentType: 'application/json'
+                            }).done(function() {
+                                document.getElementById('messageEnvio').innerHTML = 'Merci de nous avoir écrit, nous répondrons à votre message dans les plus brefs délais!!!';
+                            }).fail(function(error) {
+                                document.getElementById('messageEnvio').innerHTML = 'Oops... ' + JSON.stringify(error);
+                            });
                             return false;
                         }
                         
